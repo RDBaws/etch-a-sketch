@@ -1,20 +1,57 @@
-* {
+/*Root is basically the tag above html, styles applied here apply to the whole document
+Root is mainly used to declare global variables*/
+:root {
+	/* These are css variables */
+	--colNum: 16;
+	--squareColor: #808080;
+	--hoverColor: #808080;
+
+	/* Making sure everything is nice and tight */
 	border: 0;
 	padding: 0;
 	margin: 0;
 }
 
-#inner-div {
-	width: 6vw;
-	height: 6.25vw;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
+.container {
+	/* Sets the display type */
+	display: grid;
+	grid-template-columns: repeat(var(--colNum), auto);
+	height: 600px;
+	width: 600px;
+	margin: 1em auto;
+	border: .25em solid gray;
 }
 
-#main-container {
-	height: 980px;
-	width: 980px;
-	background-color: aliceblue;
-	font-size: 0;
+.squares {
+	/* This class will be accessed from the javascript file */
+	border: 1px solid var(--squareColor);
 }
+
+.hover {
+	background-color: var(--hoverColor);
+}
+
+.show {
+	/* I dont fully understand whats happpening here */
+	display: block;
+}
+
+button {
+	display: inline-block;
+	margin: 1em 0 0.5em 0;
+	padding: 16px;
+	border: none;
+	background-color: #808080;
+	color: white;
+	font-size: 16px;
+}
+
+button:hover {
+	background-color: blueviolet;
+}
+
+.buttons {
+	text-align: center;
+}
+
+
